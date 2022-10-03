@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F31C3DDB28BBB8D40083DBA5 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31C3DDA28BBB8D40083DBA5 /* RefeicoesTableViewController.swift */; };
+		F349CB5C28CE70070007F862 /* MealDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F349CB5B28CE70070007F862 /* MealDAO.swift */; };
+		F349CB5E28CE720C0007F862 /* ItemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F349CB5D28CE720C0007F862 /* ItemDAO.swift */; };
 		F35F577A28BED06000BAEF54 /* AdicionarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35F577828BED06000BAEF54 /* AdicionarViewController.swift */; };
 		F35F577B28BED06000BAEF54 /* AdicionarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35F577928BED06000BAEF54 /* AdicionarViewController.xib */; };
+		F38208FC28C43C87005A59C1 /* AlertCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38208FB28C43C87005A59C1 /* AlertCustom.swift */; };
+		F3D06C5F28C54D66005D2281 /* RemoveMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D06C5E28C54D66005D2281 /* RemoveMealViewController.swift */; };
 		F3E433B928B188C200264D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E433B828B188C200264D24 /* AppDelegate.swift */; };
 		F3E433BB28B188C200264D24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E433BA28B188C200264D24 /* SceneDelegate.swift */; };
 		F3E433BD28B188C200264D24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E433BC28B188C200264D24 /* ViewController.swift */; };
@@ -22,8 +26,12 @@
 
 /* Begin PBXFileReference section */
 		F31C3DDA28BBB8D40083DBA5 /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
+		F349CB5B28CE70070007F862 /* MealDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDAO.swift; sourceTree = "<group>"; };
+		F349CB5D28CE720C0007F862 /* ItemDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDAO.swift; sourceTree = "<group>"; };
 		F35F577828BED06000BAEF54 /* AdicionarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarViewController.swift; sourceTree = "<group>"; };
 		F35F577928BED06000BAEF54 /* AdicionarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarViewController.xib; sourceTree = "<group>"; };
+		F38208FB28C43C87005A59C1 /* AlertCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCustom.swift; sourceTree = "<group>"; };
+		F3D06C5E28C54D66005D2281 /* RemoveMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveMealViewController.swift; sourceTree = "<group>"; };
 		F3E433B528B188C200264D24 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3E433B828B188C200264D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3E433BA28B188C200264D24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +88,9 @@
 			children = (
 				F3FEED1928B42A3B004750DD /* Meal.swift */,
 				F3FEED1B28B42B2F004750DD /* Item.swift */,
+				F38208FB28C43C87005A59C1 /* AlertCustom.swift */,
+				F349CB5B28CE70070007F862 /* MealDAO.swift */,
+				F349CB5D28CE720C0007F862 /* ItemDAO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +98,7 @@
 		F3FEED1E28B42C08004750DD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F3D06C5E28C54D66005D2281 /* RemoveMealViewController.swift */,
 				F35F577828BED06000BAEF54 /* AdicionarViewController.swift */,
 				F3E433BC28B188C200264D24 /* ViewController.swift */,
 				F31C3DDA28BBB8D40083DBA5 /* RefeicoesTableViewController.swift */,
@@ -188,11 +200,15 @@
 			files = (
 				F3FEED1C28B42B2F004750DD /* Item.swift in Sources */,
 				F3FEED1A28B42A3B004750DD /* Meal.swift in Sources */,
+				F349CB5E28CE720C0007F862 /* ItemDAO.swift in Sources */,
 				F3E433BD28B188C200264D24 /* ViewController.swift in Sources */,
 				F31C3DDB28BBB8D40083DBA5 /* RefeicoesTableViewController.swift in Sources */,
 				F35F577A28BED06000BAEF54 /* AdicionarViewController.swift in Sources */,
+				F3D06C5F28C54D66005D2281 /* RemoveMealViewController.swift in Sources */,
 				F3E433B928B188C200264D24 /* AppDelegate.swift in Sources */,
+				F349CB5C28CE70070007F862 /* MealDAO.swift in Sources */,
 				F3E433BB28B188C200264D24 /* SceneDelegate.swift in Sources */,
+				F38208FC28C43C87005A59C1 /* AlertCustom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

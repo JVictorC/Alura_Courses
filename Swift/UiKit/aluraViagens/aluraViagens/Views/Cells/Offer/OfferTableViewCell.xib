@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfferTableViewCell" id="KGk-i7-Jjw" customClass="OfferTableViewCell" customModule="aluraViagens" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3fI-NZ-Jrg">
+                        <rect key="frame" x="10" y="10" width="300" height="365"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T8-hl-9aS">
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="365"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vQM-yY-jDn">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="WFK-QZ-Onz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="lH9-Rk-Mza">
+                                        <rect key="frame" x="10" y="180" width="125" height="108"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AÉRO + HOTEL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flr-x2-AjK">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="20"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="30"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gramado + Rota do Chocolate" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlP-wM-KS0">
+                                                <rect key="frame" x="0.0" y="23" width="125" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="25"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A partir de 2.500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8b-AF-TQf">
+                                                <rect key="frame" x="0.0" y="62.5" width="125" height="20"/>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="22"/>
+                                                </variation>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0LS-l5-dyL">
+                                                <rect key="frame" x="0.0" y="85.5" width="125" height="22.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="R$ 569" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11O-rl-IDV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="54Z-d8-cJE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="16"/>
+                                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="26"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="em até 12x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-Ia-xzD">
+                                                        <rect key="frame" x="77" y="0.0" width="48" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="11"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="20"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="vQM-yY-jDn" firstAttribute="top" secondItem="7T8-hl-9aS" secondAttribute="top" id="1Yf-dL-Qef"/>
+                                    <constraint firstItem="lH9-Rk-Mza" firstAttribute="leading" secondItem="7T8-hl-9aS" secondAttribute="leading" constant="10" id="3jk-Zv-JCN"/>
+                                    <constraint firstAttribute="trailing" secondItem="vQM-yY-jDn" secondAttribute="trailing" id="7Mw-w7-eAk"/>
+                                    <constraint firstAttribute="trailing" secondItem="lH9-Rk-Mza" secondAttribute="trailing" constant="10" id="atX-CU-lMT"/>
+                                    <constraint firstItem="lH9-Rk-Mza" firstAttribute="top" secondItem="vQM-yY-jDn" secondAttribute="bottom" constant="10" id="ttO-6Z-MYm"/>
+                                    <constraint firstItem="vQM-yY-jDn" firstAttribute="leading" secondItem="7T8-hl-9aS" secondAttribute="leading" id="xrK-vC-53R"/>
+                                </constraints>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfg-XO-nob">
+                                <rect key="frame" x="155" y="0.0" width="145" height="365"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h0P-Ur-Err">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="skj-DW-sw0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mbi-UE-Bx7">
+                                        <rect key="frame" x="10" y="180" width="125" height="108"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AÉRO + HOTEL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw2-28-oUr">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="20"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="30"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gramado + Rota do Chocolate" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLw-yD-axK">
+                                                <rect key="frame" x="0.0" y="23" width="125" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="25"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A partir de 2.500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrm-mb-ZWy">
+                                                <rect key="frame" x="0.0" y="62.5" width="125" height="20"/>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="22"/>
+                                                </variation>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0Gq-va-6He">
+                                                <rect key="frame" x="0.0" y="85.5" width="125" height="22.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 569" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egp-eD-gPk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="P1J-xj-Q82"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="16"/>
+                                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="26"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="em até 12x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNH-kd-aeL">
+                                                        <rect key="frame" x="77" y="0.0" width="48" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="11"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="20"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="h0P-Ur-Err" secondAttribute="trailing" id="8Bm-10-vY3"/>
+                                    <constraint firstItem="h0P-Ur-Err" firstAttribute="leading" secondItem="Lfg-XO-nob" secondAttribute="leading" id="Brt-b2-5RM"/>
+                                    <constraint firstItem="mbi-UE-Bx7" firstAttribute="leading" secondItem="Lfg-XO-nob" secondAttribute="leading" constant="10" id="Meh-sr-QGb"/>
+                                    <constraint firstAttribute="trailing" secondItem="mbi-UE-Bx7" secondAttribute="trailing" constant="10" id="Nbp-M9-Dvk"/>
+                                    <constraint firstItem="mbi-UE-Bx7" firstAttribute="top" secondItem="h0P-Ur-Err" secondAttribute="bottom" constant="10" id="UTP-cA-ncY"/>
+                                    <constraint firstItem="h0P-Ur-Err" firstAttribute="top" secondItem="Lfg-XO-nob" secondAttribute="top" id="vF4-k6-1bE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3fI-NZ-Jrg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="41R-vX-3SQ"/>
+                    <constraint firstAttribute="trailing" secondItem="3fI-NZ-Jrg" secondAttribute="trailing" constant="10" id="Lye-nm-TeC"/>
+                    <constraint firstAttribute="bottom" secondItem="3fI-NZ-Jrg" secondAttribute="bottom" constant="10" id="QRW-HL-vmA"/>
+                    <constraint firstItem="3fI-NZ-Jrg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="sRY-E3-vEL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outletCollection property="travelImagesViews" destination="h0P-Ur-Err" collectionClass="NSMutableArray" id="9KY-v6-xVr"/>
+                <outletCollection property="travelImagesViews" destination="vQM-yY-jDn" collectionClass="NSMutableArray" id="1gu-bu-xB4"/>
+                <outletCollection property="travelTitlelabels" destination="flr-x2-AjK" collectionClass="NSMutableArray" id="NXL-kr-tCq"/>
+                <outletCollection property="travelTitlelabels" destination="dw2-28-oUr" collectionClass="NSMutableArray" id="h8o-PH-o6F"/>
+                <outletCollection property="travelSubTitleLabels" destination="ZlP-wM-KS0" collectionClass="NSMutableArray" id="VrR-sE-2Zf"/>
+                <outletCollection property="travelSubTitleLabels" destination="zLw-yD-axK" collectionClass="NSMutableArray" id="TEA-vQ-LqV"/>
+                <outletCollection property="priceWithoutDiscountLabels" destination="H8b-AF-TQf" collectionClass="NSMutableArray" id="ppd-zh-Pud"/>
+                <outletCollection property="priceWithoutDiscountLabels" destination="hrm-mb-ZWy" collectionClass="NSMutableArray" id="tII-ri-YRh"/>
+                <outletCollection property="priceWithDiscountLabels" destination="11O-rl-IDV" collectionClass="NSMutableArray" id="90h-PW-Oh6"/>
+                <outletCollection property="priceWithDiscountLabels" destination="Egp-eD-gPk" collectionClass="NSMutableArray" id="u9z-rq-iNR"/>
+                <outletCollection property="backgroundViews" destination="7T8-hl-9aS" collectionClass="NSMutableArray" id="xOV-Tt-8Th"/>
+                <outletCollection property="backgroundViews" destination="Lfg-XO-nob" collectionClass="NSMutableArray" id="c1l-A3-FbE"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="83.370535714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

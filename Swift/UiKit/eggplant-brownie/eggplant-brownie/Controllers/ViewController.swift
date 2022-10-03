@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         Item(nome: "Manjericão", calorias: 40),
     ]
     
+    
+    
     // MARK: IBOutlets
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var happyTextField: UITextField!
@@ -34,19 +36,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var itensTableView: UITableView?
     // MARK: IBAction
     
-    @IBAction func add() {
-        let nome: String = nameTextField?.text ?? ""
-        let felicidade: Int = Int(happyTextField?.text ?? "") ?? 0
+    @IBAction func addNewMeal() {
+        guard let meal = readDataInView() else {
+            AlertCustom(controller: self).show(subTitle: "Erro ao Ler os Dados")
+            return
+        }
         
-        let refeicao = Meal(name: nome, felicidade: felicidade, itens: SelectedItens)
-        
-        print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
-        
-        addNewMealDelegate?.add(refeicao)
+        addNewMealDelegate?.add(meal)
         
         self.navigationController?.popViewController(animated: true)
         
     }
+     
+    private func readDataInView() -> Meal? {
+        guard let name: String = nameTextField?.text,
+              let felicidade: Int = Int(happyTextField?.text ?? "")
+        else {
+            return nil
+        }
+        
+        let meal = Meal(name: name, felicidade: felicidade, itens: SelectedItens)
+        
+        return meal
+    }
+    
+    
+   
     
 }
 
@@ -111,6 +126,9 @@ extension ViewController {
     
     override func viewDidLoad() {
         navigationItem.rightBarButtonItem = createButton()
+        
+        
+        itens = ItemDao().getData() 
     }
     
     
@@ -136,16 +154,13 @@ extension ViewController: AdionarItemDelegate {
         if let safeTableView = itensTableView {
             safeTableView.reloadData()
         } else {
-            let alerta = UIAlertController(title: "Desculpe", message: "Não Foi Possivel Atualizar a Tabela", preferredStyle: .alert)
-            
-            let ok = UIAlertAction(title: "Ok", style: .default)
-            
-            
-            alerta.addAction(ok)
-            
-            
-            present(alerta, animated: true)
+            AlertCustom(controller: self).show(
+                subTitle: "Não Foi Possivel Atualizar a Tabela"
+            )
         }
+        
+        ItemDao().saveData(itens)
+        
     }
     
     
