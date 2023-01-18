@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da3813d7-0f83-492b-a37c-daaddddf3556" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Swift/UiKit/Alura-Ponto/Alura Ponto/Home/Model/Camera.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Polimorfismo/bytebank-herdado-conta/src/Conta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank-encapsulado/src/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank-encapsulado/src/Conta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank-encapsulado/src/TestaGetESet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank-encapsulado/src/TestaValores.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank/src/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank/src/CriarConta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank/src/TestaBanco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank/src/TestaContaSemCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank/src/TestaMetodo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank/src/TestaSacaValoresNegativos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../byte-bank/src/TesteReferencia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hello_word/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestaCarecteres.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestaCondicional.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestaCondicional2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestaConversao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestaFor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestaLacos2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestaPontoFlutuante.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestaValores.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestaWhile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TestasLacos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sintaxe-variaveis-e-fluxo/src/TesteSomatoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Swift/UiKit/Alura-Ponto/Alura Ponto/Home/Model/Camera.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Swift/UiKit/Alura-Ponto/Alura Ponto/Home/Model/Camera.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +44,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,6 +61,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/joao.csilva/Documents/Alura_Courses/Java/OPP/byte-bank-encapsulado",
     "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
