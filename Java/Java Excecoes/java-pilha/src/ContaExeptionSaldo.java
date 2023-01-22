@@ -1,2 +1,10 @@
-package PACKAGE_NAME;public class ContaExeptionSaldo {
+public class ContaExeptionSaldo extends RuntimeException {
+
+
+    public ContaExeptionSaldo(String message) {
+        super(message);
+    }
+
+
+
 }

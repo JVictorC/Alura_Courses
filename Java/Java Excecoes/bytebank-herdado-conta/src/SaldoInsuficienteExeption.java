@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class SaldoInsuficienteExeption {
+public class SaldoInsuficienteExeption extends Exception {
+
+    public SaldoInsuficienteExeption(String msg) { super(msg);}
 }
