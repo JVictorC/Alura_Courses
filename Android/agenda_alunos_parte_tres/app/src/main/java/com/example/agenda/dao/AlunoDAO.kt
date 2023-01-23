@@ -13,7 +13,7 @@ class AlunoDAO {
     }
 
     fun editAluno(aluno: Aluno) {
-        val oldIndex = alunos.indexOfFirst { it ->  it.id == aluno.id }
+        val oldIndex = alunos.indexOfFirst { it.id == aluno.id }
 
         alunos[oldIndex] = aluno
     }
@@ -24,5 +24,5 @@ class AlunoDAO {
         println(alunos)
     }
 
-    fun todos(): List<Aluno> = alunos.toMutableList()
+    fun todos(): MutableList<Aluno> = alunos.toMutableList()
 }

@@ -4,21 +4,15 @@ import java.io.Serializable
 import kotlin.random.Random
 
 
-class Aluno : Serializable {
-    val id: Int =  Random.nextInt(0, 10000);
+class Aluno(nome: String, telefone: String, email: String) : Serializable {
+    val id: Int =  Random.nextInt(0, 10000)
 
-    var nome: String = ""
+    var nome: String = nome
         private set
-    var telefone: String = ""
+    var telefone: String = telefone
         private set
-    var email: String = ""
+    var email: String = email
         private set
-
-    constructor(nome: String, telefone: String, email: String) {
-        this.nome = nome
-        this.telefone = telefone
-        this.email = email
-    }
 
     override fun toString(): String {
         return nome
