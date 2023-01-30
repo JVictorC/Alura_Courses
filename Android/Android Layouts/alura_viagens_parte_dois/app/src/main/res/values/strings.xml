@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">alura_viagens</string>
+    <string name="banner_app">banner app</string>
+    <string name="especiais">Especiais</string>
+    <string name="brasil">Brasil</string>
+    <string name="imagem_cidade">imagem cidade</string>
+    <string name="preco_final">Preço final:</string>
+    <string name="realizar_pagamento">REALIZAR PAGAMENTO</string>
+    <string name="imagem_da_cidade">Imagem da cidade</string>
+    <string name="desription_pagamento">Digite as informações do cartão de crédito que voce deseja usar para o pagamento</string>
+    <string name="valor_da_comprar">Valor da Comprar:</string>
+    <string name="n_mero_do_cart_o">Número Do Cartão</string>
+    <string name="mm">MM</string>
+    <string name="aa">AA</string>
+    <string name="cvv">CVV</string>
+    <string name="nome_do_cartao">Nome do Cartão</string>
+    <string name="finalizar_compras">FINALIZAR COMPRAS</string>
+    <string name="confira_o_resumo_da_compra">Confira o resumo da compra:</string>
+    <string name="compra_realizada_com_sucesso">Compra Realizada com Sucesso :)</string>
+    <string name="parabens">Parabéns</string>
+    <string name="fundo_laranja">fundo laranja</string>
+</resources>
