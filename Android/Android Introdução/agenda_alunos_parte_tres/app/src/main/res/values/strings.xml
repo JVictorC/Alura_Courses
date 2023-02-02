@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="app_bar_add_new_aluno_name">Novo Aluno</string>
+    <string name="app_bar_edit_aluno_name">Editar Aluno</string>
+    <string name="nome">Nome</string>
+    <string name="telefone">Telefone</string>
+    <string name="email">Email</string>
+    <string name="salvar">Salvar</string>
+    <string name="adicionar_novo_aluno">Adicionar Novo Aluno</string>
+    <string name="remover">Remover</string>
+</resources>

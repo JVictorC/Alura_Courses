@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconXmlAndPng">
+        <ignore path="/Users/joao.csilva/Documents/Alura_Courses/Android/agenda_alunos_parte_tres/app/src/main/res/drawable-hdpi/ic_action_add.png" />
+    </issue>
+</lint>

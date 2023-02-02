@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="app_bar_add_new_aluno_name">Novo Aluno</string>
+    <string name="app_bar_edit_aluno_name">Editar Aluno</string>
+</resources>
