@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/item_produto_lista_nome_receita"
+        tools:text="Nome Receita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/item_produto_lista_ingredientes"
+        tools:text="Ingredientes"
+        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_produto_lista_nome_receita"
+        app:layout_constraintStart_toStartOf="@id/item_produto_lista_nome_receita"
+        app:layout_constraintEnd_toEndOf="@id/item_produto_lista_nome_receita"
+        />
+
+    <TextView
+        android:id="@+id/item_produto_lista_preco"
+        tools:text="Preco"
+        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_produto_lista_ingredientes"
+        app:layout_constraintStart_toStartOf="@id/item_produto_lista_nome_receita"
+        app:layout_constraintEnd_toEndOf="@id/item_produto_lista_nome_receita"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
