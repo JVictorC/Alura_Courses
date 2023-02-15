@@ -1,4 +1,4 @@
-package com.example.orgs.ui.activity
+package com.example.orgs.ui.listagem_produtos.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +7,8 @@ import com.example.orgs.constantes.Constantes
 import com.example.orgs.database.AppDataBase
 import com.example.orgs.databinding.ActivityFormularioProdutoBinding
 import com.example.orgs.entities.Produto
-import com.example.orgs.ui.dialog.FormularioImagemDialog
-import com.example.orgs.ui.helpers.ValidatesFormularioProdutoHelper
+import com.example.orgs.ui.listagem_produtos.dialog.FormularioImagemDialog
+import com.example.orgs.ui.listagem_produtos.helpers.ValidatesFormularioProdutoHelper
 import loadWithLoading
 import java.math.BigDecimal
 
@@ -18,7 +18,7 @@ class FormularioProdutoActivity : AppCompatActivity() {
     }
 
     private val dao by lazy {
-        AppDataBase.getInstance(this).produtoDao()
+        AppDataBase.instancia(this).produtoDao()
     }
 
     private var produto: Produto = Produto(

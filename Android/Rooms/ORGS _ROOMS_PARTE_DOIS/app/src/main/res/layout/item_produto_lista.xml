@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/item_produto_lista_nome_receita"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_bold"
+            android:maxLines="1"
+            android:paddingTop="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintVertical_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_produto_lista_imagem"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem/random" />
+
+
+        <TextView
+            android:id="@+id/item_produto_lista_ingredientes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat"
+            android:maxLines="1"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/item_produto_lista_nome_receita"
+            app:layout_constraintStart_toStartOf="@id/item_produto_lista_nome_receita"
+            app:layout_constraintTop_toBottomOf="@id/item_produto_lista_nome_receita"
+            tools:text="@tools:sample/lorem/random"  />
+
+        <TextView
+            android:id="@+id/item_produto_lista_preco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/item_produto_lista_nome_receita"
+            app:layout_constraintStart_toStartOf="@id/item_produto_lista_nome_receita"
+            app:layout_constraintTop_toBottomOf="@id/item_produto_lista_ingredientes"
+            tools:text="R$: 19.00" />
+
+
+        <ImageView
+            android:id="@+id/item_produto_lista_imagem"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/produto_1"
+            app:layout_constraintWidth_percent=".3"
+            app:layout_constraintEnd_toStartOf="@id/item_produto_lista_nome_receita"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
