@@ -20,6 +20,7 @@ class Produto(
     val descricao: String,
     val valor: BigDecimal,
     val imagemUrl: String? = null,
+    val usuarioId: String? = null,
 ) : Parcelable {
     fun getFormatedPtBrValor() : String {
         val formatPtBr = NumberFormat.getCurrencyInstance(Locale("pt", "br"))
@@ -32,6 +33,7 @@ class Produto(
         descricao: String,
         valor: BigDecimal,
         imagemUrl: String?,
+        userId: String?,
     ) : Produto {
         return Produto(
             id,
@@ -39,6 +41,7 @@ class Produto(
             descricao,
             valor,
             imagemUrl,
+            userId,
         )
     }
 }

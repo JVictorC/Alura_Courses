@@ -14,17 +14,11 @@
         android:theme="@style/Theme.ORGS"
         tools:targetApi="31">
         <activity
-            android:name=".ui.autenticacao.ui.activity.CadastroActivity"
+            android:name=".ui.autenticacao.activity.CadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.autenticacao.ui.activity.LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".ui.autenticacao.activity.LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.listagem_produtos.activity.DetalhesProdutoActivity"
             android:exported="false" />
@@ -33,7 +27,13 @@
             android:exported="false" />
         <activity
             android:name=".ui.listagem_produtos.activity.ListaProdutosActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

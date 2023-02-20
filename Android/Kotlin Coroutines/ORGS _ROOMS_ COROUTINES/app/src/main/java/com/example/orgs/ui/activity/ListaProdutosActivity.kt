@@ -37,14 +37,11 @@ class ListaProdutosActivity : AppCompatActivity() {
 
         setListners()
 
-
-        lifecycleScope.launchWhenResumed {
+        lifecycleScope.launch {
             produtoDao.buscaTodos().collect() { produto ->
                 adapter.update(produto.toMutableList())
             }
-
         }
-
     }
 
 

@@ -9,7 +9,12 @@ import com.example.orgs.database.converter.Converters
 import com.example.orgs.database.dao.ProdutoDao
 import com.example.orgs.entities.Produto
 
-@Database(entities = [Produto::class], version = 1, exportSchema = true)
+@Database(
+    entities = [
+        Produto::class
+               ],
+    version = 1, exportSchema = true
+)
 @TypeConverters(Converters::class)
 abstract class AppDataBase : RoomDatabase() {
     abstract fun produtoDao(): ProdutoDao

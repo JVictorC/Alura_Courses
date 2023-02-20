@@ -1,10 +1,14 @@
-package com.example.orgs.ui.autenticacao.ui.activity
+package com.example.orgs.ui.autenticacao.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import com.example.orgs.database.AppDataBase
 import com.example.orgs.databinding.ActivityCadastroBinding
 import com.example.orgs.entities.Usuario
+import com.example.orgs.ui.autenticacao.helpers.ValidatesFormularioUsuarioHelper
+import kotlinx.coroutines.launch
 
 class CadastroActivity : AppCompatActivity() {
     private val binding by lazy {
@@ -13,6 +17,10 @@ class CadastroActivity : AppCompatActivity() {
 
     private val dao by lazy {
         AppDataBase.instancia(this).usuarioDao()
+    }
+
+    private val validator by lazy {
+        ValidatesFormularioUsuarioHelper(binding)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,12 +32,24 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     private fun setButtonEnter() {
-        val newUser = createUser()
+        binding.activityFormularioCadastroBotaoCadastrar.setOnClickListener {
+            if(validator.isValid()) {
+                val newUser = createUser()
 
-        lif
-
-
-        finish()
+                lifecycleScope.launch {
+                    try {
+                        dao.salva(newUser)
+                        finish()
+                    } catch (E: Exception) {
+                        Toast.makeText(
+                            this@CadastroActivity,
+                            "Usuario Já Cadastrado",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+            }
+        }
     }
 
     private fun createUser(): Usuario {

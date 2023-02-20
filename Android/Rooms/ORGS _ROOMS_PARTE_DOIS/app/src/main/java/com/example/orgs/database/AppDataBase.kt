@@ -8,6 +8,8 @@ import androidx.room.TypeConverters
 import com.example.orgs.database.converter.Converters
 import com.example.orgs.database.dao.ProdutoDao
 import com.example.orgs.database.dao.UsuarioDao
+import com.example.orgs.database.migrations.MIGRATION2_3
+import com.example.orgs.database.migrations.MIGRATION_1_2
 import com.example.orgs.entities.Produto
 import com.example.orgs.entities.Usuario
 
@@ -16,7 +18,7 @@ import com.example.orgs.entities.Usuario
         Produto::class,
         Usuario::class,
     ],
-    version = 1,
+    version = 3,
     exportSchema = true
 )
 @TypeConverters(Converters::class)
@@ -34,10 +36,10 @@ abstract class AppDataBase : RoomDatabase() {
                 context,
                 AppDataBase::class.java,
                 "orgs.db"
-            ).fallbackToDestructiveMigration()
-                .build().also {
-                    db = it
-                }
+            ).addMigrations(
+                MIGRATION_1_2,
+                MIGRATION2_3
+            ).build().also { db = it }
         }
     }
 }

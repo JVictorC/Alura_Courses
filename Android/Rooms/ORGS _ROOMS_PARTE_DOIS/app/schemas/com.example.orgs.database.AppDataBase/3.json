@@ -1,12 +1,12 @@
 {
   "formatVersion": 1,
   "database": {
-    "version": 1,
-    "identityHash": "8305bbd8508a216857f10e0b9f068744",
+    "version": 3,
+    "identityHash": "7cc418a77013c96dc4fe6a0b22770112",
     "entities": [
       {
         "tableName": "Produto",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `descricao` TEXT NOT NULL, `valor` REAL NOT NULL, `imagemUrl` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `descricao` TEXT NOT NULL, `valor` REAL NOT NULL, `imagemUrl` TEXT, `usuarioId` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -35,6 +35,12 @@
           {
             "fieldPath": "imagemUrl",
             "columnName": "imagemUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "usuarioId",
+            "columnName": "usuarioId",
             "affinity": "TEXT",
             "notNull": false
           }
@@ -84,7 +90,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8305bbd8508a216857f10e0b9f068744')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7cc418a77013c96dc4fe6a0b22770112')"
     ]
   }
 }

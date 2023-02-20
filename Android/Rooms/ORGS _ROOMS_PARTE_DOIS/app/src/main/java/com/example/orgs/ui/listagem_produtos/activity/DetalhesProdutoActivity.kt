@@ -6,10 +6,13 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.lifecycle.lifecycleScope
 import com.example.orgs.constantes.Constantes
 import com.example.orgs.database.AppDataBase
 import com.example.orgs.databinding.ActivityDetalhesProdutoBinding
 import com.example.orgs.entities.Produto
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 import loadWithLoading
 
 
@@ -35,11 +38,15 @@ class DetalhesProdutoActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        dao.buscaPeloId(produtoId)?.let {
-            produto = it
-            supportActionBar?.title = "Detalhes ${produto.nome}"
-            initPage()
-        } ?: finish()
+        lifecycleScope.launch {
+            dao.buscaPeloId(produtoId).collect { productById ->
+                productById?.let {
+                    produto = it
+                    supportActionBar?.title = "Detalhes ${produto.nome}"
+                    initPage()
+                } ?: finish()
+            }
+        }
     }
 
     private fun initProductIdExtra() {
@@ -90,9 +97,11 @@ class DetalhesProdutoActivity : AppCompatActivity() {
     }
 
     private fun deleteProduct() {
-        dao.delete(produto)
+        lifecycleScope.launch {
+            dao.delete(produto)
 
-        finish()
+            finish()
+        }
     }
 
     private fun editProduct() {

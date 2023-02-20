@@ -3,21 +3,24 @@ package com.example.orgs.ui.listagem_produtos.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.lifecycleScope
 import com.example.orgs.constantes.Constantes
 import com.example.orgs.database.AppDataBase
 import com.example.orgs.databinding.ActivityFormularioProdutoBinding
 import com.example.orgs.entities.Produto
 import com.example.orgs.ui.listagem_produtos.dialog.FormularioImagemDialog
 import com.example.orgs.ui.listagem_produtos.helpers.ValidatesFormularioProdutoHelper
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.launch
 import loadWithLoading
 import java.math.BigDecimal
 
-class FormularioProdutoActivity : AppCompatActivity() {
+class FormularioProdutoActivity : UsuarioBaseActivity() {
     private val binding by lazy {
         ActivityFormularioProdutoBinding.inflate(layoutInflater)
     }
 
-    private val dao by lazy {
+    private val daoProdutos by lazy {
         AppDataBase.instancia(this).produtoDao()
     }
 
@@ -44,28 +47,27 @@ class FormularioProdutoActivity : AppCompatActivity() {
         supportActionBar?.title = "Cadastrar Produto"
 
         initProductIdExtra()
-
-
         setListerns()
-    }
 
-    override fun onResume() {
-        super.onResume()
-
-        if(produtoId != 0L) {
+        if (produtoId != 0L) {
             initProductFromDataBase()
         }
     }
+
 
     private fun initProductFromDataBase() {
         binding.adicionarProdutoButtonSalvar.text = "Editar"
 
         supportActionBar?.title = "Editar Produto"
 
-        dao.buscaPeloId(produtoId)?.let {
-            produto = it
-            setFields()
-        } ?: finish()
+        lifecycleScope.launch {
+            daoProdutos.buscaPeloId(produtoId).collect { productById ->
+                productById?.let {
+                    produto = it
+                    setFields()
+                } ?: finish()
+            }
+        }
     }
 
     private fun initProductIdExtra() {
@@ -101,22 +103,33 @@ class FormularioProdutoActivity : AppCompatActivity() {
         }
 
         binding.adicionarProdutoButtonSalvar.setOnClickListener {
-            with(binding) {
+
+            saveProduct()
+        }
+    }
+
+    private fun saveProduct() {
+        with(binding) {
 
 
-                val nomeText = formularioProdutoNome.text.toString()
-                val ingredientestext = formularioProdutoIngredientes.text.toString()
-                val valorText = formularioProdutoValor.text.toString()
-                val valorBigDecimal = if (valorText.isBlank()) {
-                    BigDecimal.ZERO
-                } else {
-                    valorText.toBigDecimal()
-                }
+            val nomeText = formularioProdutoNome.text.toString()
+            val ingredientestext = formularioProdutoIngredientes.text.toString()
+            val valorText = formularioProdutoValor.text.toString()
+            val userId = usuarioLogged.value?.id
 
-                if (validatesFormularioProdutoHelper.validates()) {
+            val valorBigDecimal = if (valorText.isBlank()) {
+                BigDecimal.ZERO
+            } else {
+                valorText.toBigDecimal()
+            }
 
-                    produto.update(nomeText, ingredientestext, valorBigDecimal, urlImage).let {
-                        dao.salva(it)
+
+
+            if (validatesFormularioProdutoHelper.validates()) {
+
+                produto.update(nomeText, ingredientestext, valorBigDecimal, urlImage, userId).let {
+                    lifecycleScope.launch {
+                        daoProdutos.salva(it)
 
                         finish()
                     }
