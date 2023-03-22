@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/vol_med_application
+    username: postgres
+    password: root
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+
+    properties:
+      hibernate:
+        format_sql: true
+
+      jdbc:
+        lob:
+          non_contextual_creation: true
+
+server:
+  error:
+    include-stacktrace: never
+
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:1234567}
