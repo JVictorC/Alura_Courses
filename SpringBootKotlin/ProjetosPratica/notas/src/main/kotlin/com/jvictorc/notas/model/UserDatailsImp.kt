@@ -1,34 +1,19 @@
-package com.jvictorc.notas.services
+package com.jvictorc.notas.model
 
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
-class UserDatailsImp : UserDetails {
-    override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
-        TODO("Not yet implemented")
-    }
+class UserDetailsImp(private val user: User) : UserDetails {
+    override fun getAuthorities() = mutableListOf<GrantedAuthority>()
 
-    override fun getPassword(): String {
-        TODO("Not yet implemented")
-    }
+    override fun getPassword() = user.password
+    override fun getUsername() = user.email
 
-    override fun getUsername(): String {
-        TODO("Not yet implemented")
-    }
+    override fun isAccountNonExpired() = true
 
-    override fun isAccountNonExpired(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun isAccountNonLocked() = true
 
-    override fun isAccountNonLocked(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun isCredentialsNonExpired() = true
 
-    override fun isCredentialsNonExpired(): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun isEnabled(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun isEnabled() = true
 }

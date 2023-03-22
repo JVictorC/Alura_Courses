@@ -7,7 +7,7 @@ import com.jvictorc.notas.model.User
 class MapperFormToEntityUser : Mapper<UserForm, User> {
     override fun map(formaInicial: UserForm): User {
         return User(
-            username = formaInicial.username,
+            email = formaInicial.email,
             password = formaInicial.password
         )
     }

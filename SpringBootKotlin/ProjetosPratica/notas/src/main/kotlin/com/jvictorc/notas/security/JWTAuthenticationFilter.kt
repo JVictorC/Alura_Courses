@@ -1,6 +1,7 @@
-package com.jvictorc.notas.config
+package com.jvictorc.notas.security
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.jvictorc.notas.config.JWTUtil
 import com.jvictorc.notas.dto.user.TokenJwt
 import com.jvictorc.notas.model.Credentials
 import com.jvictorc.notas.model.UserDetailsImp
@@ -24,7 +25,8 @@ class JWTAuthenticationFilter(
     override fun attemptAuthentication(request: HttpServletRequest?, response: HttpServletResponse?): Authentication {
         val (email, password) = ObjectMapper().readValue(request?.inputStream, Credentials::class.java)
 
-        val token = UsernamePasswordAuthenticationToken(email, password, Collections.singleton(SimpleGrantedAuthority("user")))
+        val token =
+            UsernamePasswordAuthenticationToken(email, password, Collections.singleton(SimpleGrantedAuthority("user")))
 
         return authenticationManagerBean.authenticate(token)
     }
@@ -36,21 +38,18 @@ class JWTAuthenticationFilter(
         chain: FilterChain?,
         authResult: Authentication?
     ) {
-        try {
-            val username = (authResult?.principal as UserDetailsImp).username
-            val token: String = jwtUtil.generateToken(username)
+        val username = (authResult?.principal as UserDetailsImp).username
+        val token: String = jwtUtil.generateToken(username)
 
 
-            response?.addHeader("Authorization", token)
-            response?.addHeader("Access-Control-Expose-Headers", "Authorization")
+        response?.addHeader("Authorization", token)
+        response?.addHeader("Access-Control-Expose-Headers", "Authorization")
 
 
-            response?.setHeader(HttpHeaders.CONTENT_TYPE, "application/json");
-            response?.outputStream?.print( ObjectMapper().writeValueAsString(TokenJwt(token)));
-            response?.flushBuffer();
-        } catch (e: Exception) {
-            print(e)
-        }
+        response?.setHeader(HttpHeaders.CONTENT_TYPE, "application/json");
+        response?.outputStream?.print(ObjectMapper().writeValueAsString(TokenJwt(token)));
+        response?.flushBuffer();
+
     }
 
 

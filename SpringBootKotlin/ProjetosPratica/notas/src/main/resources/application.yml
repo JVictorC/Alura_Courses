@@ -23,5 +23,6 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
-
+jwt:
+  secret: 123
 

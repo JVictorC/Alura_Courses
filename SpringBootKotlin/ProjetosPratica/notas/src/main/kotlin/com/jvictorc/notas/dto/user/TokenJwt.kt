@@ -1,4 +1,5 @@
 package com.jvictorc.notas.dto.user
 
-class TokenJwt {
-}
+data class TokenJwt(
+    val token: String
+)

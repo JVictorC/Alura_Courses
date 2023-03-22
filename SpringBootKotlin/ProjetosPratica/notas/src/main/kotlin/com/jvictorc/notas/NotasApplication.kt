@@ -8,16 +8,8 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.security.crypto.password.PasswordEncoder
 
-@SpringBootApplication(exclude = [ SecurityAutoConfiguration::class ])
-class NotasApplication
-
-@Configuration
-class Encoder {
-	@Bean
-	fun passwordEncoder(): PasswordEncoder {
-		return BCryptPasswordEncoder()
-	}
-}
+@SpringBootApplication()
+open class NotasApplication
 
 fun main(args: Array<String>) {
 	runApplication<NotasApplication>(*args)

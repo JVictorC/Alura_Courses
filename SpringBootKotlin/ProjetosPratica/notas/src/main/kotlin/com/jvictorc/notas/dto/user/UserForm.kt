@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Size
 data class UserForm(
     @field:NotEmpty
     @field:Size(max = 20)
-    val username: String,
+    val email: String,
     @field:NotEmpty
     @field:Size(min = 5, max = 20)
     var password: String,

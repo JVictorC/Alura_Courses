@@ -1,6 +1,7 @@
 package com.jvictorc.notas.controllers
 
 import com.jvictorc.notas.dto.user.StatusUser
+import com.jvictorc.notas.dto.user.TokenJwt
 import com.jvictorc.notas.dto.user.UserForm
 import com.jvictorc.notas.dto.user.UserView
 import com.jvictorc.notas.services.UserServices
@@ -19,22 +20,19 @@ import org.springframework.web.bind.annotation.RestController
 class UserController(
     val services: UserServices,
 ) {
-
-    @GetMapping("/validate-user")
-    fun validateUser(
-        @RequestBody @Valid userForm: UserForm
-    ) : ResponseEntity<StatusUser> {
-        val isUserValid = services.validatedUser(userForm)
-
-        return ResponseEntity.status(HttpStatus.OK).body(StatusUser(isUserValid))
-    }
-
     @PostMapping("/create-account")
     @Transactional
     fun createCount(
         @RequestBody @Valid newUser: UserForm
     ) : UserView {
         return services.createNewUser(newUser)
+    }
+
+    @GetMapping("/validate-user")
+    fun validateUser(
+        @Valid @RequestBody userForm: UserForm
+    ) : StatusUser {
+        return StatusUser(services.validatedUser(userForm))
     }
 
 }

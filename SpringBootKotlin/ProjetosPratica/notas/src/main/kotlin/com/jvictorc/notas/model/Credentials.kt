@@ -1,4 +1,6 @@
 package com.jvictorc.notas.model
 
-class Credentials {
-}
+data class Credentials(
+    val email: String = "",
+    val password: String = ""
+)

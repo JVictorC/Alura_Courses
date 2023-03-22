@@ -8,7 +8,7 @@ class MapperEntityToViewUser : Mapper<User, UserView> {
     override fun map(formaInicial: User): UserView {
         return UserView(
             id = formaInicial.id.toString(),
-            username = formaInicial.username
+            email = formaInicial.email
         )
     }
 }

@@ -11,10 +11,28 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 
 @RestControllerAdvice
 class ExeptionHandler {
-    @ExceptionHandler(NotFoundNota::class)
+
+
+    @ExceptionHandler(NotAuthorization::class)
+    @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
+    fun handlerNotAuthorization(
+        exeption: NotFound,
+        request: HttpServletRequest
+    ): ErrorView {
+
+        return ErrorView(
+            message = exeption.message,
+            error = HttpStatus.NOT_FOUND.name,
+            status = HttpStatus.NOT_FOUND.value(),
+            path = request.servletPath
+        )
+    }
+
+
+    @ExceptionHandler(NotFound::class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     fun handlerNotFoundNota(
-        exeption: NotFoundNota,
+        exeption: NotFound,
         request: HttpServletRequest
     ): ErrorView {
 
